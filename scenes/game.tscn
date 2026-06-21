@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://bay2dhi37q48n" path="res://scenes/player.tscn" id="1_2wrtc"]
 [ext_resource type="Texture2D" uid="uid://3jnipqps3pq" path="res://asset/MoldyCheese1.png" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://b7uuvowjsfpsg" path="res://scripts/tilemap.gd" id="3_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://ctuuhferh26lx" path="res://asset/Cheezies1.png" id="4_iywne"]
+[ext_resource type="Script" uid="uid://0p54obhtfx7o" path="res://scripts/timer.gd" id="5_p57ef"]
+[ext_resource type="Texture2D" uid="uid://cs8ary7xqw1sp" path="res://asset/Cheezies2.png" id="5_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -37,7 +40,38 @@ script = ExtResource("3_lnu2h")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=333433662]
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer" unique_id=614123220]
+offset_left = 27.0
+offset_top = 14.0
+offset_right = 43.0
+offset_bottom = 57.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer2" unique_id=1838354442]
+layout_mode = 2
+texture = ExtResource("4_iywne")
+
+[node name="cheese_2_count" type="Label" parent="CanvasLayer/VBoxContainer2" unique_id=1245328329]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=2055649708]
+offset_left = 47.0
+offset_top = 14.0
+offset_right = 63.0
+offset_bottom = 57.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer" unique_id=2101183266]
+layout_mode = 2
+texture = ExtResource("5_u5sy4")
+
+[node name="cheese_1_count" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=1797221456]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=336357123]
+visible = false
 z_index = 5
 offset_left = 49.0
 offset_top = 96.0
@@ -45,30 +79,7 @@ offset_right = 137.0
 offset_bottom = 136.0
 text = "0"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=17856393]
-offset_left = 40.0
-offset_top = 19.0
-offset_right = 119.0
-offset_bottom = 57.0
-alignment = 1
+[node name="Timer" type="Timer" parent="." unique_id=689153005]
+script = ExtResource("5_p57ef")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HBoxContainer" unique_id=614123220]
-layout_mode = 2
-
-[node name="Cheddar_label" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer" unique_id=1403201705]
-layout_mode = 2
-text = "Cheddar:"
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer/VBoxContainer" unique_id=1838354442]
-layout_mode = 2
-
-[node name="Cheddar_count" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer" unique_id=1245328329]
-layout_mode = 2
-text = "25"
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/HBoxContainer" unique_id=1657167219]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer2" unique_id=1197895420]
-layout_mode = 2
-text = "Cheddar:"
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
