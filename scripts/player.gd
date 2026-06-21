@@ -2,9 +2,9 @@ extends CharacterBody2D
 
 enum CheeseType { SOFT = 0, HARD = 1 }
 
-const JUMP_VELOCITY = -275
+var JUMP_VELOCITY = -275 - Global.upgrades["Move Speed"]*13
 const WALL_JUMP_X = 180
-const MOVE_SPEED = 120
+var MOVE_SPEED = 80 + Global.upgrades["Move Speed"] * 10
 const GRAVITY = 600
 
 var dir := -1
@@ -60,11 +60,11 @@ func handle_jump():
 			velocity.y = JUMP_VELOCITY
 
 		elif left.is_colliding():
-			velocity.y = -225
+			velocity.y = -225- Global.upgrades["Move Speed"]*13
 			velocity.x = WALL_JUMP_X
 
 		elif right.is_colliding():
-			velocity.y = -225
+			velocity.y = -225 - Global.upgrades["Move Speed"]*13
 			velocity.x = -WALL_JUMP_X
 
 
