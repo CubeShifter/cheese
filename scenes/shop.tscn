@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cu2tdbuyku46q"]
+
+[ext_resource type="Texture2D" uid="uid://cu3erpap4rayi" path="res://asset/Stars.png" id="1_lx5au"]
+[ext_resource type="Shader" uid="uid://dd16uorakpohr" path="res://vhs.gdshader" id="2_xfvoa"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1l46r"]
+shader = ExtResource("2_xfvoa")
+shader_parameter/mask_density = 128.0
+shader_parameter/mask_intensity = 0.0999999977648
+shader_parameter/convergence_intensity = 0.02000000095
+shader_parameter/halation_intensity = 0.23999999463552
+shader_parameter/halation_radius = 2.0
+shader_parameter/tv_brightness = -0.1
+shader_parameter/tv_contrast = 1.1999999731775999
+shader_parameter/tv_saturation = 0.75
+shader_parameter/vignette_intensity = 0.73999998345952
+shader_parameter/vignette_smoothness = 0.66999998502416
+shader_parameter/corner_radius = 0.01
+shader_parameter/border_thickness_horizontal = 0.006
+shader_parameter/border_thickness_vertical = 0.008
+shader_parameter/border_smoothness = 0.002
+
+[node name="shop" type="Control" unique_id=56448174]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1610205646]
+z_index = -2
+layout_mode = 0
+offset_left = -473.0
+offset_top = -311.0
+offset_right = 810.0
+offset_bottom = 508.0
+texture = ExtResource("1_lx5au")
+stretch_mode = 1
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=2010153557]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2" unique_id=746485049]
+material = SubResource("ShaderMaterial_1l46r")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
