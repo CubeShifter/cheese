@@ -30,7 +30,6 @@ position = Vector2(8, -8)
 position = Vector2(0, 4)
 zoom = Vector2(2, 2)
 limit_enabled = false
-position_smoothing_enabled = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1438268485]
 tile_set = SubResource("TileSet_tq6n8")
@@ -40,17 +39,18 @@ script = ExtResource("3_lnu2h")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=336357123]
 z_index = 5
-offset_left = -146.0
-offset_top = -91.0
-offset_right = -106.0
-offset_bottom = -51.0
+offset_left = 186.0
+offset_top = 18.0
+offset_right = 226.0
+offset_bottom = 58.0
 text = "0"
 
-[node name="BoxContainer" type="BoxContainer" parent="CanvasLayer" unique_id=1370521700]
-offset_left = 17.0
-offset_top = -44.0
-offset_right = 96.0
-offset_bottom = -6.0
+[node name="BoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=17856393]
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 99.0
+offset_bottom = 53.0
+alignment = 1
 
 [node name="Label" type="Label" parent="CanvasLayer/BoxContainer" unique_id=1403201705]
 layout_mode = 2
