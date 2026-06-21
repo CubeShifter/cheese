@@ -16,7 +16,7 @@ var cheese := {CheeseType.EDIBLE: 0, CheeseType.EXPIRED: 0}
 @onready var tile_map_layer: TileMapLayer = $"../TileMapLayer"
 #@onready var cheese_label: RichTextLabel = $"../CanvasLayer/RichTextLabel"
 @onready var cheese1_label: Label = $"../CanvasLayer/VBoxContainer/cheese_1_count"
-@onready var cheese2_label: Label = $"../CanvasLayer/VBoxContainer/cheese_1_count"
+@onready var cheese2_label: Label = $"../CanvasLayer/VBoxContainer2/cheese_2_count"
 
 
 func _ready():
