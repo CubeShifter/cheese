@@ -120,3 +120,7 @@ func destroy_tile(pos: Vector2) -> int:
 		return atlas_coords.x
 
 	return -1
+
+
+func _on_timer_timeout() -> void:
+	pass # Replace with function body.

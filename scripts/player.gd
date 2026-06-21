@@ -102,4 +102,4 @@ func update_ui():
 
 
 func _on_timer_timeout() -> void:
-	can_mine=  true
+	can_mine = true

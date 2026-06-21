@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bd8dny2o5wcuu"]
 
 [ext_resource type="PackedScene" uid="uid://bay2dhi37q48n" path="res://scenes/player.tscn" id="1_2wrtc"]
-[ext_resource type="Shader" path="res://vhs.gdshader" id="1_lbhrr"]
+[ext_resource type="Shader" uid="uid://dd16uorakpohr" path="res://vhs.gdshader" id="1_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://cstggcddsqxpw" path="res://asset/CheeseTable.png" id="1_p57ef"]
 [ext_resource type="FontFile" uid="uid://bdl5irbsh5i2b" path="res://asset/tuff fint.ttf" id="2_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://3jnipqps3pq" path="res://asset/MoldyCheese1.png" id="2_yqjtg"]
@@ -132,6 +132,8 @@ script = ExtResource("3_lnu2h")
 
 [node name="player" parent="." unique_id=180119122 instance=ExtResource("1_2wrtc")]
 position = Vector2(8, -16)
+collision_layer = 3
+collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=65742753]
 position = Vector2(0, 4)
@@ -176,7 +178,11 @@ scale = Vector2(2, 2)
 texture = ExtResource("10_vtaks")
 
 [node name="home" type="Area2D" parent="." unique_id=737093072]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="home" unique_id=1433477573]
 position = Vector2(-97.5, -64.5)
 shape = SubResource("RectangleShape2D_tq6n8")
+
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
