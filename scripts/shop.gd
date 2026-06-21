@@ -27,28 +27,28 @@ func _on_texture_button_1_pressed() -> void:
 func _on_texture_button_2_pressed() -> void:
 	if Global.bank[Global.upgrades[texts[1]]] >= 25:
 		Global.bank[Global.upgrades[texts[1]]] -= 25
-		Global.upgrades[texts[0]] += 1
+		Global.upgrades[texts[1]] += 1
 		
 
 
 func _on_texture_button_3_pressed() -> void:
 	if Global.bank[Global.upgrades[texts[2]]] >= 30:
 		Global.bank[Global.upgrades[texts[2]]] -= 30
-		Global.upgrades[texts[0]] += 1
+		Global.upgrades[texts[2]] += 1
 		
 
 
 func _on_texture_button_4_pressed() -> void:
 	if Global.bank[Global.upgrades[texts[3]]] >= 35:
 		Global.bank[Global.upgrades[texts[3]]] -= 35
-		Global.upgrades[texts[0]] += 1
+		Global.upgrades[texts[3]] += 1
 		
 
 
 func _on_texture_button_5_pressed() -> void:
 	if Global.bank[Global.upgrades[texts[4]]] >= 45:
 		Global.bank[Global.upgrades[texts[4]]] -= 45
-		Global.upgrades[texts[0]] += 1
+		Global.upgrades[texts[4]] += 1
 		
 
 

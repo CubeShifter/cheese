@@ -15,7 +15,7 @@ var can_mine = true
 var cheese := [0,0,0,0,0]
 var jump_buffer := 0
 var bombs = Global.upgrades["Bombs"]
-var drills = Global.upgrades["Drills"]
+var drills = Global.upgrades["Drill"]
 
 @onready var right: RayCast2D = $Right
 @onready var left: RayCast2D = $Left
